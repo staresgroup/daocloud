@@ -23,4 +23,9 @@ public class MyController {
 
         return myService.add(firstNum, secondNum) + "s ";
     }
+
+    @GetMapping("/products")
+    public String getProducts() {
+        return myService.getProducts();
+    }
 }
