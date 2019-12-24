@@ -1,5 +1,6 @@
 package com.example.daocloud;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import com.example.daocloud.MyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,8 @@ public class MyController {
     }
 
     @GetMapping("/products")
+    @CrossOrigin(origins = "*")
+    @ResponseBody
     public String getProducts() {
         return myService.getProducts();
     }
